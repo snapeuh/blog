@@ -1,0 +1,65 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+p {
+  margin: 0 0 10px; }
+
+html {
+  font-size: 18px;
+  -webkit-tap-highlight-color: transparent; }
+
+body {
+  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #38444c;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.container {
+  width: 970px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+  .container .row {
+    margin-right: -15px;
+    margin-left: -15px; }
+    .container .row .col-12 {
+      width: 100%; }
+
+.button {
+  background: #9ca9b0;
+  display: inline-block;
+  border-radius: 4px;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none; }
+  .button.small {
+    padding: .15rem .5rem; }
+
+.button-group .button {
+  margin: 0 .2rem; }
+  .button-group .button:first-child {
+    margin-left: 0; }
+  .button-group .button:last-child {
+    margin-right: 0; }
+
+svg {
+  display: inline-block;
+  vertical-align: -2px; }
+  svg path {
+    fill: #fff; }
+
+header {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
