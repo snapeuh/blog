@@ -1,19 +1,12 @@
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
+*,
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-p {
-  margin: 0 0 10px; }
-
 html {
-  font-size: 18px;
+  font-size: 19px;
   -webkit-tap-highlight-color: transparent; }
 
 body {
@@ -25,34 +18,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.container {
-  width: 970px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto; }
-  .container .row {
-    margin-right: -15px;
-    margin-left: -15px; }
-    .container .row .col-12 {
-      width: 100%; }
-
-.button {
-  background: #9ca9b0;
-  display: inline-block;
-  border-radius: 4px;
-  color: white;
-  text-transform: uppercase;
-  text-decoration: none; }
-  .button.small {
-    padding: .15rem .5rem; }
-
-.button-group .button {
-  margin: 0 .2rem; }
-  .button-group .button:first-child {
-    margin-left: 0; }
-  .button-group .button:last-child {
-    margin-right: 0; }
+a {
+  color: inherit;
+  text-decoration: inherit; }
 
 svg {
   display: inline-block;
@@ -60,6 +28,76 @@ svg {
   svg path {
     fill: #fff; }
 
-header {
+h1, h2, h3 {
+  margin-top: 0;
+  color: #262e34; }
+
+.clearfix:before,
+.clearfix:after,
+.container:before,
+.container:after {
+  display: table;
+  content: ''; }
+
+.clearfix:after,
+.container:after {
+  clear: both; }
+
+.button {
+  background: #9ca9b0;
+  display: inline-block;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px; }
+  .button.small {
+    padding: .15rem .5rem; }
+
+.container {
+  width: 960px;
+  margin: 0 auto; }
+
+.header {
   padding: 1.5rem 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+  .header .topbar {
+    text-align: right; }
+    .header .topbar .button {
+      margin: 0 .2rem; }
+      .header .topbar .button:first-child {
+        margin-left: 0; }
+      .header .topbar .button:last-child {
+        margin-right: 0; }
+  .header .identity {
+    padding: 1rem 0 2rem;
+    text-align: center; }
+    .header .identity h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem; }
+    .header .identity h2 {
+      color: #35b2f3;
+      font-size: 1.5rem;
+      margin-bottom: 0; }
+
+.articles {
+  padding: 3rem 0; }
+  .articles .article {
+    width: 80%;
+    margin: 0 auto; }
+    .articles .article h1 {
+      padding: 0 4rem;
+      font-size: 2rem;
+      line-height: 2.4rem;
+      text-align: center;
+      margin-bottom: 0.4rem; }
+    .articles .article .meta {
+      text-align: center;
+      color: #9ca9b0;
+      font-size: 1rem;
+      margin-bottom: 1.5rem; }
+    .articles .article h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      margin-top: 1.5rem; }
+    .articles .article p {
+      margin: 0 0 1rem; }
