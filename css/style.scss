@@ -1,9 +1,13 @@
-$text-color: #38444c;
+$text-color: #263d4d;
 $secondary-text-color: #9ca9b0;
-$heading-color: #262e34;
-$highlight-color: #35b2f3;
-$button-text-color: #fff;
+$title-color: #262e34;
+$title-color-alt: #35b2f3;
+
+$gradient-first-stop: #bc80ff;
+$gradient-last-stop: #80caff;
+
 $button-bg-color: #9ca9b0;
+$button-text-color: #fff;
 
 *, 
 *:before,
@@ -13,138 +17,90 @@ $button-bg-color: #9ca9b0;
     box-sizing: border-box;
 }
 
-html {
-    font-size: 19px;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-body {
-    font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    color: $text-color;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
 a {
     color: inherit;
     text-decoration: inherit;
 }
 
-svg {
-    display: inline-block;
-    vertical-align: -2px;
-
-    path {
-        fill: #fff;
-    }
-}
-
 h1, h2, h3 {
-    margin-top: 0;
-    color: $heading-color;
+    font-weight: 600;
 }
 
-.clearfix:before,
-.clearfix:after,
-.container:before,
-.container:after {
-    display: table;
-    content: '';
+html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-size: 18px;
 }
 
-.clearfix:after,
-.container:after {
-    clear: both;
+body {
+    background: #f7fafc;
+
+    font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+    font-size: 1rem;
+    line-height: 1.4rem;
+
+    color: $text-color;
+
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.button {
-    background: $button-bg-color;
-    display: inline-block;
-    color: $button-text-color;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 4px;
+header {
+    position: relative;
+    background: #fff;
+    height: 100px;
 
-    &.small {
-        padding: .15rem .5rem;
+    &:after {
+        background: linear-gradient(90deg, $gradient-first-stop, $gradient-last-stop);
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        height: 2px;
+        content: '';
     }
-}
 
-.container {
-    width: 960px;
-    margin: 0 auto;
-}
+    .logo {
+        position: relative;
+        margin-top: 20px;
+        padding: 0px 0px 0px 60px;
+        width: 270px;
+        font-size: 32px;
+        line-height: 30px;
+        text-transform: uppercase;
+        font-weight: 300;
 
-.header {
-    padding: 1.5rem 0;
-    border-bottom: 1px solid rgba(0, 0, 0, .05);
+        a {
+            color: $text-color;
+            text-decoration: none;
+        }
 
-    .topbar {
-        text-align: right;
+        &:before {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            content: 'r';
+            font-family: "Monoton", cursive;
+            text-transform: uppercase;
+            font-size: 64px;
+            line-height: 64px;
+        }
+    }
 
-        .button {
-            margin: 0 .2rem;
+    .nav {
+        display: inline-block;
+        margin-top: 34px;
+        color: $text-color;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        text-decoration: none;
 
-            &:first-child {
-                margin-left: 0;
+        svg {
+            vertical-align: -9px;
+
+            path {
+                fill: $text-color;
             }
-
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-    }
-
-    .identity {
-        padding: 1rem 0 2rem;
-        text-align: center;
-
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        h2 {
-            color: $highlight-color;
-            font-size: 1.5rem;
-            margin-bottom: 0;
-        }
-    }
-}
-
-.articles {
-    padding: 3rem 0;
-
-    .article {
-        width: 80%;
-        margin: 0 auto;
-
-        h1 {
-            padding: 0 4rem;
-            font-size: 2rem;
-            line-height: 2.4rem;
-            text-align: center;
-            margin-bottom: 0.4rem;
-        }
-
-        .meta {
-            text-align: center;
-            color: $secondary-text-color;
-            font-size: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        p {
-            margin: 0 0 1rem;
         }
     }
 }

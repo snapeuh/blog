@@ -5,99 +5,68 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-html {
-  font-size: 19px;
-  -webkit-tap-highlight-color: transparent; }
-
-body {
-  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  color: #38444c;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
 a {
   color: inherit;
   text-decoration: inherit; }
 
-svg {
-  display: inline-block;
-  vertical-align: -2px; }
-  svg path {
-    fill: #fff; }
-
 h1, h2, h3 {
-  margin-top: 0;
-  color: #262e34; }
+  font-weight: 600; }
 
-.clearfix:before,
-.clearfix:after,
-.container:before,
-.container:after {
-  display: table;
-  content: ''; }
+html {
+  -webkit-tap-highlight-color: transparent;
+  font-size: 18px; }
 
-.clearfix:after,
-.container:after {
-  clear: both; }
+body {
+  background: #f7fafc;
+  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  color: #263d4d;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
-.button {
-  background: #9ca9b0;
-  display: inline-block;
-  color: white;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 4px; }
-  .button.small {
-    padding: .15rem .5rem; }
-
-.container {
-  width: 960px;
-  margin: 0 auto; }
-
-.header {
-  padding: 1.5rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
-  .header .topbar {
-    text-align: right; }
-    .header .topbar .button {
-      margin: 0 .2rem; }
-      .header .topbar .button:first-child {
-        margin-left: 0; }
-      .header .topbar .button:last-child {
-        margin-right: 0; }
-  .header .identity {
-    padding: 1rem 0 2rem;
-    text-align: center; }
-    .header .identity h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem; }
-    .header .identity h2 {
-      color: #35b2f3;
-      font-size: 1.5rem;
-      margin-bottom: 0; }
-
-.articles {
-  padding: 3rem 0; }
-  .articles .article {
-    width: 80%;
-    margin: 0 auto; }
-    .articles .article h1 {
-      padding: 0 4rem;
-      font-size: 2rem;
-      line-height: 2.4rem;
-      text-align: center;
-      margin-bottom: 0.4rem; }
-    .articles .article .meta {
-      text-align: center;
-      color: #9ca9b0;
-      font-size: 1rem;
-      margin-bottom: 1.5rem; }
-    .articles .article h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      margin-top: 1.5rem; }
-    .articles .article p {
-      margin: 0 0 1rem; }
+header {
+  position: relative;
+  background: #fff;
+  height: 100px; }
+  header:after {
+    background: linear-gradient(90deg, #bc80ff, #80caff);
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 2px;
+    content: ''; }
+  header .logo {
+    position: relative;
+    margin-top: 20px;
+    padding: 0px 0px 0px 60px;
+    width: 270px;
+    font-size: 32px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: 300; }
+    header .logo a {
+      color: #263d4d;
+      text-decoration: none; }
+    header .logo:before {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      content: 'r';
+      font-family: "Monoton", cursive;
+      text-transform: uppercase;
+      font-size: 64px;
+      line-height: 64px; }
+  header .nav {
+    display: inline-block;
+    margin-top: 34px;
+    color: #263d4d;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    text-decoration: none; }
+    header .nav svg {
+      vertical-align: -9px; }
+      header .nav svg path {
+        fill: #263d4d; }
