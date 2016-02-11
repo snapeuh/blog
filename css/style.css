@@ -34,7 +34,6 @@ header .logo {
   position: relative;
   display: inline-block;
   padding: 13px 0px 13px 88px;
-  width: 275px;
   text-transform: uppercase;
   text-decoration: none; }
   header .logo .name {
@@ -54,6 +53,48 @@ header .logo {
     font-size: 46px;
     line-height: 44px;
     border-bottom-right-radius: 4px; }
+header .nav {
+  position: relative;
+  float: right;
+  margin: 20px 30px 0px 0px; }
+  header .nav > button {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    line-height: 24px;
+    color: #0096ff;
+    text-transform: uppercase;
+    font-weight: 600; }
+  header .nav svg {
+    vertical-align: -9px; }
+    header .nav svg rect {
+      fill: #0096ff; }
+  header .nav .dropdown {
+    position: absolute;
+    background: #fff;
+    top: 120%;
+    left: 50%;
+    width: 110px;
+    margin-left: -55px;
+    border-radius: 4px;
+    list-style: none;
+    text-align: center;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.6);
+    transform-origin: 50% 0%;
+    transition: all ease-out .1s; }
+    header .nav .dropdown li {
+      padding: 8px 25px;
+      border-top: 1px solid #f2f3f4; }
+    header .nav .dropdown a {
+      color: #677996; }
+    header .nav .dropdown.in {
+      transform: scale(1);
+      visibility: visible;
+      opacity: 1; }
 
 main {
   width: 820px;
@@ -111,12 +152,12 @@ main {
     main .separator:after {
       background: #0064c6;
       left: 10px; }
-  main nav {
+  main .pagination {
     background: #f2f3f4;
     margin-top: 60px;
     padding: 15px;
     text-align: center; }
-    main nav a {
+    main .pagination a {
       color: #677996;
       font-size: 18px; }
 

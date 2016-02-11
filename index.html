@@ -13,39 +13,47 @@
     <body>
         <header>
             <a class="logo" href="/">
-                <h1 class="name">Le blog de Romain Etchegoyhen</h1>
+                <h1 class="name">Romain Etchegoyhen<br>Creative developer</h1>
             </a>
+            <nav class="nav">
+                <button type="button" class="button"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><rect x="96" y="241" width="320" height="32"/><rect x="96" y="145" width="320" height="32"/><rect x="96" y="337" width="320" height="32"/></g></svg> Menu</button>
+                <ul class="dropdown">
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
         </header>
         
         <main class="posts">
             <article class="post">
                 <h2><a href="#">How to Use Flexbox with Interactive Examples</a></h2>
-                <p class="meta">12 février 2016 • dans <a href="#">Lifestyle</a></p>
+                <p class="meta">12 february 2016 • in <a href="#">Lifestyle</a></p>
                 <p>I also didn’t really know what anxiety is. I’ve heard about it, but I always believed that these things won’t happen to me, a happy & <a href="#">healthy person</a>.</p>
                 <p>A little over a year ago something strange happened. It was a regular day and early in the morning. I was on the subway train making my way to work from Brooklyn to Manhattan.</p>
-                <p><a class="read" href="#">Lire la suite →</a></p>
+                <p><a class="read" href="#">Continue reading →</a></p>
             </article>
 
             <div class="separator"></div>
 
             <article class="post">
                 <h2><a href="#">Every Reason to Panic</a></h2>
-                <p class="meta">12 février 2016 • dans <a href="#">Lifestyle</a></p>
+                <p class="meta">12 february 2016 • in <a href="#">Lifestyle</a></p>
                 <p>I also didn’t really know what anxiety is. I’ve heard about it, but I always believed that these things won’t happen to me, a happy & healthy person.</p>
                 <p>A little over a year ago something strange happened. It was a regular day and early in the morning. I was on the subway train <a href="#">making</a> my way to work from Brooklyn to Manhattan.</p>
-                <p><a class="read" href="#">Lire la suite →</a></p>
+                <p><a class="read" href="#">Continue reading →</a></p>
             </article>
 
-            <nav class="pagination">
-                <a class="old-posts" href="#">Articles plus anciens →</a>
-            </nav>
+            <div class="pagination">
+                <a class="old-posts" href="#">Older Articles →</a>
+            </div>
         </main>
 
         <footer>
             <div class="row">
                 <div class="left">  
-                    <p>Hello, I am Romain Etchegoyhen aka @<a href="#">snapeuh</a>. I am a Creative Developer. Soon-to-be Dad. I work at @<a href="#">ReputationVIP</a>. <a class="read" href="#">Lire la suite →</a></p>
-                    <p>Tous droits réservés • 2006-2016</p>
+                    <p>Hello, I am Romain Etchegoyhen aka @<a href="#">snapeuh</a>. I am a Creative Developer. Soon-to-be Dad. <a class="read" href="#">About →</a></p>
+                    <p>All rights reserved • 2006-2016</p>
                 </div>
                 <div class="right">
                     <ul class="social">
@@ -83,5 +91,11 @@
         </script>
         
         <script src="/js/zepto.min.js"></script>
+
+        <script>
+            $('nav .button').click(function(){
+                $('.dropdown').toggleClass('in');
+            });
+        </script>
     </body>
 </html>

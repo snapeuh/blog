@@ -7,6 +7,7 @@ $title-color: #00172e;
 $content-width: 820px;
 
 $site-background: #ffffff;
+$light-background: #f2f3f4;
 $footer-background: #00172e;
 
 *, 
@@ -54,7 +55,6 @@ header {
         position: relative;
         display: inline-block;
         padding: 13px 0px 13px 88px;
-        width: 275px;
         text-transform: uppercase;
         text-decoration: none;
 
@@ -77,6 +77,64 @@ header {
             font-size: 46px;
             line-height: 44px;
             border-bottom-right-radius: 4px;
+        }
+    }
+
+    .nav {
+        position: relative;
+        float: right;
+        margin: 20px 30px 0px 0px;
+
+        & > button {
+            background: none;
+            border: none;
+            outline: none;
+            font-size: 20px;
+            line-height: 24px;
+            color: $highlight-text-color;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        svg {
+            vertical-align: -9px;
+
+            rect {
+                fill: $highlight-text-color;
+            }
+        }
+
+        .dropdown {
+            position: absolute;
+            background: #fff;
+            top: 120%;
+            left: 50%;
+            width: 110px;
+            margin-left: -55px;
+            border-radius: 4px;
+            list-style: none;
+            text-align: center;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, .15);
+            visibility: hidden;
+            opacity: 0;
+            transform: scale(.6);
+            transform-origin: 50% 0%;
+            transition: all ease-out .1s;
+
+            li {
+                padding: 8px 25px;
+                border-top: 1px solid $light-background;
+            }
+
+            a {
+                color: $secondary-text-color;
+            }
+
+            &.in {
+                transform: scale(1);
+                visibility: visible;
+                opacity: 1;
+            }
         }
     }
 }
@@ -164,8 +222,8 @@ main {
         }
     }
 
-    nav {
-        background: #f2f3f4;
+    .pagination {
+        background: $light-background;
         margin-top: 60px;
         padding: 15px;
         text-align: center;
