@@ -117,7 +117,7 @@ header {
             box-shadow: 0px 1px 3px rgba(0, 0, 0, .15);
             visibility: hidden;
             opacity: 0;
-            transform: scale(.6);
+            transform: translateY(-20px) scale(.6);
             transform-origin: 50% 0%;
             transition: all ease-out .1s;
 
@@ -131,7 +131,7 @@ header {
             }
 
             &.in {
-                transform: scale(1);
+                transform: translateY(0px) scale(1);
                 visibility: visible;
                 opacity: 1;
             }
@@ -142,7 +142,7 @@ header {
 main {
     width: $content-width;
     margin: 0px auto;
-    padding: 60px 0px;
+    padding: 80px 0px;
 
     article {
         h2 {
@@ -156,9 +156,11 @@ main {
 
             a {
                 color: $title-color;
+                border-bottom: 1px solid transparent;
+                transition: all ease-out .1s;
 
                 &:hover {
-                    border-bottom: 2px solid $title-color;
+                    border-bottom: 1px solid $title-color;
                 }
             }
         }
@@ -172,8 +174,8 @@ main {
             text-align: center;
 
             a {
-                color: $highlight-text-color;
-                border-bottom: 1px solid $highlight-text-color;
+                color: $secondary-text-color;
+                border-bottom: 1px solid $secondary-text-color;
             }
         }
 
@@ -189,6 +191,7 @@ main {
                 border-bottom: none;
                 color: $highlight-text-color;
                 font-weight: 600;
+                border-radius: 25px;
             }
         }
     }
@@ -237,7 +240,7 @@ main {
 
 footer {
     background: $footer-background;
-    padding: 60px 0px 30px;
+    padding: 60px 0px 40px;
     font-size: 18px;
     line-height: 32px;
     color: $secondary-text-color;
@@ -292,253 +295,3 @@ footer {
         }
     }
 }
-
-/*.button {
-    background: $button-bg-color;
-    display: inline-block;
-    padding: 8px 30px;
-    color: $button-text-color;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 24px;
-    text-decoration: none;
-
-    &:hover {
-        color: $button-text-color;
-    }
-}
-
-header {
-    position: relative;
-    background: #fff;
-    height: 100px;
-
-    &:after {
-        background: linear-gradient(90deg, $gradient-first-stop, $gradient-last-stop);
-        position: absolute;
-        left: 0px;
-        right: 0px;
-        bottom: 0px;
-        height: 2px;
-        content: '';
-    }
-
-    .logo {
-        position: relative;
-        margin-top: 20px;
-        padding: 0px 0px 0px 60px;
-        width: 270px;
-        font-size: 28px;
-        line-height: 30px;
-        text-transform: uppercase;
-        font-weight: 300;
-
-        a {
-            color: $title-color;
-            text-decoration: none;
-        }
-
-        &:before {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            content: 'r';
-            font-family: "Monoton", cursive;
-            text-transform: uppercase;
-            font-size: 64px;
-            line-height: 64px;
-        }
-    }
-
-    .nav {
-        display: inline-block;
-        margin-top: 34px;
-        color: $title-color;
-        font-size: 22px;
-        text-transform: uppercase;
-        text-decoration: none;
-
-        svg {
-            vertical-align: -9px;
-
-            rect {
-                fill: $title-color;
-            }
-        }
-    }
-}
-
-.posts {
-    padding: 60px 0px;
-
-    .post {
-        .title {
-            font-size: 28px;
-            text-align: center;
-            margin-bottom: 4px;
-        }
-
-        .caption {
-            font-size: 16px;
-            color: $secondary-text-color;
-            text-align: center;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-
-            a {
-                border-bottom: 1px solid $secondary-text-color;
-            }
-        }
-
-        h2 {
-            font-size: 26px;
-            line-height: 32px;
-            margin-bottom: 10px;
-        }
-
-        h3 {
-            font-size: 22px;
-            line-height: 28px;
-            margin-bottom: 10px;
-        }
-        
-        p, ul, blockquote, pre, code {
-            margin-bottom: 15px;
-
-            a {
-                display: inline-block;
-                position: relative;
-
-                &:after {
-                    position: absolute;
-                    left: 0px;
-                    right: 0px;
-                    bottom: 0px;
-                    height: 1px;
-                    background: linear-gradient(90deg, $gradient-first-stop, $gradient-last-stop);
-                    content: '';
-                }
-            }
-        }
-
-        .read-more {
-            padding-top: 10px;
-        }
-    }
-
-    .divider {
-        background: $gradient-middle-stop;
-        position: relative;
-        margin: 60px auto;
-        width: 4px;
-        height: 4px;
-        border-radius: 50%;
-
-        &:before, &:after {
-            position: absolute;
-            top: 0px;
-            left: -10px;
-            width: 4px;
-            height: 4px;
-            background: $gradient-first-stop;
-            border-radius: 50%;
-            content: '';
-        }
-
-        &:after {
-            left: auto;
-            right: -10px;
-            background: $gradient-last-stop;
-        }
-    }
-}
-
-.work {
-    padding: 60px 0px;
-
-    .project {
-        position: relative;
-        border-radius: 4px;
-        overflow: hidden;
-
-        &:hover {
-            .permalink {
-                opacity: 1;
-                visibility: visible;
-            }
-        }
-
-        .permalink {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            right: 0px;
-            bottom: 0px;
-            z-index: 1;
-
-            color: #fff;
-            text-transform: uppercase;
-
-            opacity: 0;
-            visibility: hidden;
-            transition: all ease-out .3s;
-
-            .metadata {
-                position: absolute;
-                top: 50%;
-                left: 0px;
-                right: 0px;
-                margin-top: -32px;
-                text-align: center;
-
-                .client {
-                    font-size: 26px;
-                    color: #fff;
-                    margin-bottom: 8px;
-                }
-
-                .tags {
-                    list-style: none;
-                    padding: 0px;
-                    margin: 0px;
-                    font-size: 16px;
-                    line-height: 24px;
-                    font-weight: 600;
-
-                    li {
-                        display: inline-block;
-                        padding: 0px 12px;
-                        margin: 0px 4px;
-                        border: 2px solid #fff;
-                        border-radius: 16px;
-                    }
-                }
-            }
-            
-            .permalink {
-                display: block;
-
-                &:hover {
-                    text-decoration: none;
-                }
-
-                .client {
-                    font-size: 26px;
-                    color: #fff;
-                }
-            }
-
-            &:before {
-                position: absolute;
-                top: 0px;
-                left: 0px;
-                right: 0px;
-                bottom: 0px;
-                background: linear-gradient(90deg, $gradient-first-stop, $gradient-last-stop);
-                opacity: .8;
-                content: '';
-                z-index: -1;
-            }
-        }
-    }
-}*/
