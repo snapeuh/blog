@@ -17,14 +17,24 @@ h1, h2, h3, h4 {
   color: #00172e;
   font-weight: 600; }
 
+.row {
+  width: 100%;
+  margin: 0px auto;
+  padding: 0px 15px; }
+  .row:before, .row:after {
+    display: table;
+    content: " "; }
+  .row:after {
+    clear: both; }
+
 html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
   background: white;
   font-family: "Source Sans Pro", "Helvetica Neue", "Arial", sans-serif;
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 30px;
   color: #2b3d57;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -37,6 +47,7 @@ header .logo {
   text-transform: uppercase;
   text-decoration: none; }
   header .logo .name {
+    display: none;
     color: #2b3d57;
     font-size: 20px;
     line-height: 24px;
@@ -97,16 +108,16 @@ header .nav {
       opacity: 1; }
 
 main {
-  width: 820px;
+  width: 100%;
   margin: 0px auto;
-  padding: 80px 0px; }
+  padding: 80px 15px; }
   main article h2 {
-    width: 80%;
+    width: 100%;
     margin: 0px auto;
     margin-bottom: 10px;
     font-weight: 700;
-    font-size: 42px;
-    line-height: 48px;
+    font-size: 36px;
+    line-height: 46px;
     text-align: center; }
     main article h2 a {
       color: #00172e;
@@ -162,7 +173,7 @@ main {
     text-align: center; }
     main .pagination a {
       color: #677996;
-      font-size: 18px; }
+      font-size: 16px; }
 
 footer {
   background: #00172e;
@@ -170,20 +181,6 @@ footer {
   font-size: 18px;
   line-height: 32px;
   color: #677996; }
-  footer .row {
-    width: 820px;
-    margin: 0px auto; }
-    footer .row .left, footer .row .right {
-      width: 50%; }
-    footer .row .left {
-      float: left; }
-    footer .row .right {
-      float: right; }
-    footer .row:before, footer .row:after {
-      display: table;
-      content: " "; }
-    footer .row:after {
-      clear: both; }
   footer a {
     color: #677996;
     border-bottom: 1px solid #677996; }
@@ -194,7 +191,39 @@ footer {
   footer p {
     margin-bottom: 30px; }
   footer .social {
-    float: right;
     list-style: none; }
     footer .social a {
       border-bottom: none; }
+
+@media (min-width: 480px) {
+  header .logo .name {
+    display: block; } }
+@media (min-width: 880px) {
+  body {
+    font-size: 20px;
+    line-height: 32px; }
+
+  .row {
+    max-width: 850px; }
+    .row .left, .row .right {
+      width: 50%; }
+    .row .left {
+      float: left; }
+    .row .right {
+      float: right; }
+
+  main {
+    max-width: 850px; }
+    main article h2 {
+      width: 80%;
+      font-size: 42px;
+      line-height: 48px; }
+    main article .meta {
+      font-size: 16px; }
+    main article p {
+      margin-bottom: 30px; }
+    main .pagination a {
+      font-size: 18px; }
+
+  footer .social {
+    float: right; } }
