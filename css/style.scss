@@ -59,7 +59,7 @@ header {
         text-decoration: none;
 
         .name {
-            color: $secondary-text-color;
+            color: $text-color;
             font-size: 20px;
             line-height: 24px;
             font-weight: 400;
@@ -91,7 +91,7 @@ header {
             outline: none;
             font-size: 20px;
             line-height: 24px;
-            color: $highlight-text-color;
+            color: $text-color;
             text-transform: uppercase;
             font-weight: 600;
         }
@@ -100,7 +100,7 @@ header {
             vertical-align: -9px;
 
             rect {
-                fill: $highlight-text-color;
+                fill: $text-color;
             }
         }
 

@@ -37,7 +37,7 @@ header .logo {
   text-transform: uppercase;
   text-decoration: none; }
   header .logo .name {
-    color: #677996;
+    color: #2b3d57;
     font-size: 20px;
     line-height: 24px;
     font-weight: 400; }
@@ -63,13 +63,13 @@ header .nav {
     outline: none;
     font-size: 20px;
     line-height: 24px;
-    color: #0096ff;
+    color: #2b3d57;
     text-transform: uppercase;
     font-weight: 600; }
   header .nav svg {
     vertical-align: -9px; }
     header .nav svg rect {
-      fill: #0096ff; }
+      fill: #2b3d57; }
   header .nav .dropdown {
     position: absolute;
     background: #fff;
