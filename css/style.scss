@@ -205,16 +205,16 @@ main {
             }
 
             .read {
+                position: relative;
                 border-bottom: none;
                 color: $highlight-text-color;
-                font-weight: 600;
-                border-radius: 25px;
+                font-weight: 400;
             }
         }
     }
 
     .separator {
-        background: #007de2;
+        background: $secondary-text-color;
         position: relative;
         margin: 60px auto;
         width: 4px;
@@ -232,12 +232,12 @@ main {
         }
 
         &:before {
-            background: #0096ff;
+            background: $secondary-text-color;
             left: -10px;
         }
 
         &:after {
-            background: #0064c6;
+            background: $secondary-text-color;
             left: 10px;
         }
     }
@@ -247,6 +247,7 @@ main {
         margin-top: 60px;
         padding: 15px;
         text-align: center;
+        border-radius: 4px;
 
         a {
             color: $secondary-text-color;
@@ -269,7 +270,7 @@ footer {
         &.read {
             border-bottom: none;
             color: $highlight-text-color;
-            font-weight: 600;
+            font-weight: 400;
         }
     }
 
@@ -282,6 +283,17 @@ footer {
 
         a {
             border-bottom: none;
+
+            svg {
+                width: 18px;
+                height: 18px;
+                vertical-align: -3px;
+                margin-right: 5px;
+
+                path {
+                    fill: $secondary-text-color;
+                }
+            }
         }
     }
 }
