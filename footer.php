@@ -1,60 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-        <title>Blog – Romain Etchegoyhen</title>
-
-        <link href="//fonts.googleapis.com/css?family=Monoton|Source+Sans+Pro:400,600,700" rel="stylesheet" type="text/css">
-        <link href="/css/normalize.css" rel="stylesheet" type="text/css">
-        <link href="/css/style.css" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-        <header>
-            <a class="logo" href="/">
-                <h1 class="name">Romain Etchegoyhen<br>Creative developer</h1>
-            </a>
-            <nav class="nav">
-                <button type="button" class="button"><svg version="1.1" id="Layer_1" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><rect x="96" y="241" width="320" height="32"/><rect x="96" y="145" width="320" height="32"/><rect x="96" y="337" width="320" height="32"/></g></svg> Menu</button>
-                <ul class="dropdown">
-                    <li><a href="#">Work</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </nav>
-        </header>
-        
-        <main class="posts">
-            <article class="post">
-                <h2><a href="#">How to Use Flexbox with Interactive Examples</a></h2>
-                <p class="meta">12 february 2016 • in <a href="#">Lifestyle</a></p>
-                <p>I also didn’t really know what anxiety is. I’ve heard about it, but I always believed that these things won’t happen to me, a happy & <a href="#">healthy person</a>.</p>
-                <p>A little over a year ago something strange happened. It was a regular day and early in the morning. I was on the subway train making my way to work from Brooklyn to Manhattan.</p>
-                <p><a class="read" href="#">Continue reading →</a></p>
-            </article>
-
-            <div class="separator"></div>
-
-            <article class="post">
-                <h2><a href="#">Every Reason to Panic</a></h2>
-                <p class="meta">12 february 2016 • in <a href="#">Lifestyle</a></p>
-                <p>I also didn’t really know what anxiety is. I’ve heard about it, but I always believed that these things won’t happen to me, a happy & healthy person.</p>
-                <p>A little over a year ago something strange happened. It was a regular day and early in the morning. I was on the subway train <a href="#">making</a> my way to work from Brooklyn to Manhattan.</p>
-                <p><a class="read" href="#">Continue reading →</a></p>
-            </article>
-
-            <div class="pagination">
-                <a class="old-posts" href="#">Older Articles →</a>
-            </div>
-        </main>
-
         <footer>
             <div class="row">
                 <div class="left">  
-                    <p>Hello, I am Romain Etchegoyhen aka @<a href="#">snapeuh</a>. I am a Creative Developer. I am a soon-to-be Dad. <a class="read" href="#">[+]</a></p>
-                    <p>All rights reserved • 2016</p>
+                    <p>Hello, I am Romain Etchegoyhen aka @<a href="https://twitter.com/snapeuh">snapeuh</a>. I am a Creative Developer. I am a soon-to-be Dad. <a class="read" href="#">About →</a></p>
+                    <p>All rights reserved • <?php echo date('Y'); ?></p>
                 </div>
                 <div class="right">
                     <ul class="social">
@@ -75,12 +23,14 @@
             </div>
         </footer>
         
-        <script src="/js/zepto.min.js"></script>
+        <script src="<?php echo get_template_directory_uri(); ?>/js/zepto.min.js"></script>
 
         <script>
             $('nav .button').click(function(){
                 $('.dropdown').toggleClass('in');
             });
         </script>
+
+        <?php wp_footer(); ?>
     </body>
 </html>
