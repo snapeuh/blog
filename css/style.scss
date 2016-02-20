@@ -55,7 +55,7 @@ html {
 body {
     background: $site-background;
 
-    font-family: "Source Sans Pro", "Helvetica Neue", "Arial", sans-serif;
+    font-family: "Open Sans", "Helvetica Neue", "Arial", sans-serif;
     font-size: 18px;
     line-height: 30px;
 
@@ -67,6 +67,8 @@ body {
 }
 
 header {
+    min-height: 75px;
+
     .logo {
         position: relative;
         display: inline-block;
