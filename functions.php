@@ -51,6 +51,11 @@ remove_action('wp_head', 'wp_shortlink_wp_head');
 add_filter('xmlrpc_enabled', '__return_false');
 
 /*--------------------------*
+/*  Allow HTML on User bio
+/*--------------------------*/
+remove_filter('pre_user_description', 'wp_filter_kses');
+
+/*--------------------------*
 /*  Remove WordPress version
 /*--------------------------*/
 function remove_wp_version() {
