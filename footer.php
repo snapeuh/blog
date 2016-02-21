@@ -27,11 +27,20 @@
         </footer>
         
         <script src="<?php echo get_template_directory_uri(); ?>/js/zepto.min.js"></script>
+        <script src="<?php echo get_template_directory_uri(); ?>/js/highlight.min.js"></script>
 
         <script>
-            $('nav .button').click(function(){
-                $('.dropdown').toggleClass('in');
-            });
+            (function(){
+                $('nav .button').click(function(){
+                    $('.dropdown').toggleClass('in');
+                });
+
+                $('p').has('img').addClass('has-img');
+
+                $('pre code').each(function(i, block){
+                    hljs.highlightBlock(block);
+                });
+            })();
         </script>
 
         <?php wp_footer(); ?>

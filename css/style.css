@@ -7,6 +7,19 @@
   margin: 0px;
   padding: 0px; }
 
+html {
+  -webkit-tap-highlight-color: transparent; }
+
+body {
+  background: white;
+  font-family: "Open Sans", "Helvetica Neue", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  color: #2b3d57;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
 a {
   color: #0096ff;
   text-decoration: none; }
@@ -16,6 +29,9 @@ h1, h2, h3, h4 {
   padding: 0px;
   color: #00172e;
   font-weight: 600; }
+
+img, iframe {
+  vertical-align: bottom; }
 
 .row {
   width: 100%;
@@ -27,18 +43,11 @@ h1, h2, h3, h4 {
   .row:after {
     clear: both; }
 
-html {
-  -webkit-tap-highlight-color: transparent; }
+.hljs {
+  padding: 0px; }
 
-body {
-  background: white;
-  font-family: "Open Sans", "Helvetica Neue", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 30px;
-  color: #2b3d57;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+.text-center {
+  text-align: center; }
 
 header {
   min-height: 75px; }
@@ -147,6 +156,13 @@ main {
       border-bottom: none;
       color: #0096ff;
       font-weight: 400; }
+    main article p img {
+      max-width: 100%;
+      height: auto; }
+    main article p.has-img {
+      margin: 40px 0px; }
+  main article pre {
+    margin-bottom: 30px; }
   main .separator {
     background: #677996;
     position: relative;
@@ -174,15 +190,19 @@ main {
     padding: 15px;
     text-align: center;
     border-radius: 4px; }
+    main .pagination .row .left {
+      text-align: left; }
+    main .pagination .row .right {
+      text-align: right; }
     main .pagination a {
       color: #677996;
       font-size: 16px; }
 
 footer {
   background: #00172e;
-  padding: 60px 0px 40px;
-  font-size: 18px;
-  line-height: 32px;
+  padding: 60px 0px 30px;
+  font-size: 16px;
+  line-height: 28px;
   color: #677996; }
   footer a {
     color: #677996;
@@ -194,7 +214,8 @@ footer {
   footer p {
     margin-bottom: 30px; }
   footer .social {
-    list-style: none; }
+    list-style: none;
+    margin-bottom: 30px; }
     footer .social a {
       border-bottom: none; }
       footer .social a svg {
@@ -209,10 +230,6 @@ footer {
   header .logo .name {
     display: block; } }
 @media (min-width: 880px) {
-  body {
-    font-size: 20px;
-    line-height: 32px; }
-
   .row {
     max-width: 850px; }
     .row .left, .row .right {
@@ -235,5 +252,8 @@ footer {
     main .pagination a {
       font-size: 18px; }
 
-  footer .social {
-    float: right; } }
+  footer {
+    font-size: 18px;
+    line-height: 32px; }
+    footer .social {
+      float: right; } }

@@ -7,9 +7,9 @@ $title-color: #00172e;
 $content-width: 850px;
 $content-breakpoint-width: 880px;
 
-$site-background: #ffffff;
+$white-background: #ffffff;
 $light-background: #f2f3f4;
-$footer-background: #00172e;
+$dark-background: #00172e;
 
 *, 
 *:before,
@@ -19,6 +19,24 @@ $footer-background: #00172e;
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+}
+
+html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    background: $white-background;
+
+    font-family: "Open Sans", "Helvetica Neue", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 32px;
+
+    color: $text-color;
+
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -31,6 +49,10 @@ h1, h2, h3, h4 {
     padding: 0px;
     color: $title-color;
     font-weight: 600;
+}
+
+img, iframe {
+    vertical-align: bottom;
 }
 
 .row {
@@ -48,22 +70,12 @@ h1, h2, h3, h4 {
     }
 }
 
-html {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+.hljs {
+    padding: 0px;
 }
 
-body {
-    background: $site-background;
-
-    font-family: "Open Sans", "Helvetica Neue", "Arial", sans-serif;
-    font-size: 18px;
-    line-height: 30px;
-
-    color: $text-color;
-
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+.text-center {
+    text-align: center;
 }
 
 header {
@@ -212,6 +224,19 @@ main {
                 color: $highlight-text-color;
                 font-weight: 400;
             }
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            &.has-img {
+                margin: 40px 0px;
+            }
+        }
+
+        pre {
+            margin-bottom: 30px;
         }
     }
 
@@ -251,6 +276,16 @@ main {
         text-align: center;
         border-radius: 4px;
 
+        .row {
+            .left {
+                text-align: left;
+            }
+
+            .right {
+                text-align: right;
+            }
+        }
+
         a {
             color: $secondary-text-color;
             font-size: 16px;
@@ -259,10 +294,10 @@ main {
 }
 
 footer {
-    background: $footer-background;
-    padding: 60px 0px 40px;
-    font-size: 18px;
-    line-height: 32px;
+    background: $dark-background;
+    padding: 60px 0px 30px;
+    font-size: 16px;
+    line-height: 28px;
     color: $secondary-text-color;
 
     a {
@@ -282,6 +317,7 @@ footer {
 
     .social {
         list-style: none;
+        margin-bottom: 30px;
 
         a {
             border-bottom: none;
@@ -311,11 +347,6 @@ footer {
 }
 
 @media (min-width: $content-breakpoint-width) {
-    body {
-        font-size: 20px;
-        line-height: 32px;
-    }
-
     .row {
         max-width: $content-width;
 
@@ -359,6 +390,9 @@ footer {
     }
 
     footer {
+        font-size: 18px;
+        line-height: 32px;
+
         .social {
             float: right;
         }
