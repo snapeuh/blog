@@ -6,7 +6,7 @@
         <?php $category = get_the_category()[0]; ?>
 
         <article class="post">
-            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+            <h2><?php the_title(); ?></h2>
             <p class="meta"><?php the_time(get_option('date_format')); ?> • in <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>"><?php echo esc_attr($category->name); ?></a></p>
             <?php the_content(); ?>
             <p class="text-center">
