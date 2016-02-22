@@ -23,7 +23,6 @@ add_action('init', 'register_menu');
 /*--------------------------*/
 function is_last_post(){
     global $wp_query;
-
     return (($wp_query->current_post + 1) == $wp_query->post_count);
 }
 
@@ -45,6 +44,11 @@ function code_shortcode($atts, $content = null) {
     return '<pre><code class="' . $atts['language'] . '">' . $content . '</code></pre>';
 }
 add_shortcode('code', 'code_shortcode');
+
+/*--------------------------*
+/*  Allow HTML on User bio
+/*--------------------------*/
+remove_filter('pre_user_description', 'wp_filter_kses');
 
 /*--------------------------*
 /*  Remove emojis
@@ -79,9 +83,13 @@ remove_action('wp_head', 'wp_shortlink_wp_head');
 add_filter('xmlrpc_enabled', '__return_false');
 
 /*--------------------------*
-/*  Allow HTML on User bio
+/*  Remove XML-RPC exploit
 /*--------------------------*/
-remove_filter('pre_user_description', 'wp_filter_kses');
+function remove_xmlrpc_exploit($methods){
+    unset($methods['system.multicall']);
+    return $methods;
+}
+add_filter('xmlrpc_methods', 'remove_xmlrpc_exploit');
 
 /*--------------------------*
 /*  Remove WordPress version
