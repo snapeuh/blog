@@ -1,8 +1,8 @@
         <footer>
             <div class="row">
                 <div class="left">
-                    <p><?php echo get_the_author_meta('description', 1); ?><br><a class="read" href="/about/">About →</a></p>
-                    <p>All rights reserved • <?php echo date('Y'); ?></p>
+                    <p><?php echo get_the_author_meta('description', 1); ?><br><a class="read" href="/profil/">Mon profil →</a></p>
+                    <p>Tous droits réservés • <?php echo date('Y'); ?></p>
                 </div>
                 <div class="right">
                     <ul class="social">

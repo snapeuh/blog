@@ -30,8 +30,8 @@ body {
 
     font-family: "Open Sans", sans-serif;
     font-size: 18px;
-    font-weight: 400;
     line-height: 32px;
+    font-weight: 400;
 
     color: $text-color;
 
@@ -244,6 +244,11 @@ main {
             }
         }
 
+        ul {
+            margin-bottom: 30px;
+            list-style: disc inside none;
+        }
+
         pre {
             margin-bottom: 30px;
         }
@@ -305,8 +310,6 @@ main {
 footer {
     background: $dark-background;
     padding: 60px 0px 30px;
-    font-size: 16px;
-    line-height: 28px;
     color: $secondary-text-color;
 
     a {
@@ -399,9 +402,6 @@ footer {
     }
 
     footer {
-        font-size: 18px;
-        line-height: 32px;
-
         .social {
             float: right;
         }

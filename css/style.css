@@ -14,8 +14,8 @@ body {
   background: white;
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
-  font-weight: 400;
   line-height: 32px;
+  font-weight: 400;
   color: #2b3d57;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -167,6 +167,9 @@ main {
       margin: 45px 0px; }
     main article p:last-child {
       margin-bottom: 0px; }
+  main article ul {
+    margin-bottom: 30px;
+    list-style: disc inside none; }
   main article pre {
     margin-bottom: 30px; }
   main .separator {
@@ -207,8 +210,6 @@ main {
 footer {
   background: #00172e;
   padding: 60px 0px 30px;
-  font-size: 16px;
-  line-height: 28px;
   color: #677996; }
   footer a {
     color: #677996;
@@ -258,8 +259,5 @@ footer {
     main .pagination a {
       font-size: 18px; }
 
-  footer {
-    font-size: 18px;
-    line-height: 32px; }
-    footer .social {
-      float: right; } }
+  footer .social {
+    float: right; } }
