@@ -7,7 +7,7 @@
 
         <article class="post">
             <h2><?php the_title(); ?></h2>
-            <p class="meta"><?php the_time(get_option('date_format')); ?> • dans <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>"><?php echo esc_attr($category->name); ?></a></p>
+            <p class="meta"><?php the_time(get_option('date_format')); ?> • in <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>"><?php echo esc_attr($category->name); ?></a></p>
             <?php the_content(); ?>
             <p class="text-center">
                 <a href="https://twitter.com/share" class="twitter-share-button" data-via="snapeuh" data-size="large">Tweet</a>
@@ -15,7 +15,7 @@
         </article>
 
         <div class="pagination">
-            <a href="<?php echo home_url(); ?>">← Retour aux articles</a>
+            <a href="<?php echo home_url(); ?>">← Back to the Articles</a>
         </div>
 
         <script>
