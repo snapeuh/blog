@@ -1,16 +1,19 @@
 <?php get_header(); ?>
 
-<main class="posts">
+<main class="main">
 
-    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+    <div class="posts">
 
-        <article class="post">
-            <h2><?php the_title(); ?></h2>
-            <p class="meta"><?php the_time(get_option('date_format')); ?></p>
-            <?php the_content(); ?>
-        </article>
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-    <?php endwhile; endif; ?>
+            <article class="post">
+                <h2><?php the_title(); ?></h2>
+                <?php the_content(); ?>
+            </article>
+
+        <?php endwhile; endif; ?>
+
+    </div>
 
 </main>
 
