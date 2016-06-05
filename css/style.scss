@@ -200,7 +200,7 @@ main {
                     transition: all ease-out .1s;
 
                     &:hover {
-                        border-bottom: 1px solid $title-color;
+                        border-bottom-color: $title-color;
                     }
                 }
             }
@@ -237,7 +237,9 @@ main {
                     position: relative;
                     border-bottom: none;
                     color: $highlight-text-color;
-                    font-weight: 400;
+                    font-weight: 600;
+                    font-size: 16px;
+                    text-transform: uppercase;
                 }
 
                 img {
@@ -247,6 +249,10 @@ main {
 
                 &.has-img {
                     margin: 45px 0px;
+
+                    img {
+                        border-radius: 2px;
+                    }
                 }
 
                 &:last-child {

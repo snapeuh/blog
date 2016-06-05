@@ -142,7 +142,7 @@ main {
         border-bottom: 1px solid transparent;
         transition: all ease-out .1s; }
         main .posts article h2 a:hover {
-          border-bottom: 1px solid #00172e; }
+          border-bottom-color: #00172e; }
     main .posts article .page h2 {
       margin-bottom: 40px; }
     main .posts article .meta {
@@ -164,12 +164,16 @@ main {
         position: relative;
         border-bottom: none;
         color: #0096ff;
-        font-weight: 400; }
+        font-weight: 600;
+        font-size: 16px;
+        text-transform: uppercase; }
       main .posts article p img {
         max-width: 100%;
         height: auto; }
       main .posts article p.has-img {
         margin: 45px 0px; }
+        main .posts article p.has-img img {
+          border-radius: 2px; }
       main .posts article p:last-child {
         margin-bottom: 0px; }
     main .posts article ul {
